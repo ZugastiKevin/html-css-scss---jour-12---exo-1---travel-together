@@ -1,0 +1,11 @@
+@use "./variables" as variable;
+
+@mixin button {
+    padding: 1rem;
+    text-transform: uppercase;
+    color: variable.$black;
+    background-color: variable.$background-color-button;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px 1px variable.$black;
+    cursor: pointer;
+}

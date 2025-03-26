@@ -1,0 +1,23 @@
+{
+  "name": "exo-1---travel-together",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ZugastiKevin/html-css-scss---jour-12---exo-1---travel-together#readme",
+  "bugs": {
+    "url": "https://github.com/ZugastiKevin/html-css-scss---jour-12---exo-1---travel-together/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZugastiKevin/html-css-scss---jour-12---exo-1---travel-together.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w assets/scss:assets/css"
+  },
+  "dependencies": {
+    "sass": "^1.86.0"
+  }
+}

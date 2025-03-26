@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as btn;
+
+.btn {
+    @include btn
+}
+
+.btn::after {
+    content: " >";
+}
