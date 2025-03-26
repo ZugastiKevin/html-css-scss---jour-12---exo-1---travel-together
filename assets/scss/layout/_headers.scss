@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as mixin;
+
+header {
+    div {
+        div {}
+        nav {
+            ul {
+                li {
+                    a {
+                        @include mixin.list-navigation
+                    }
+                }
+            }
+        }
+    }
+}

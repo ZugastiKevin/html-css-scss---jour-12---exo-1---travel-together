@@ -1,0 +1,16 @@
+@use "../base/typography";
+
+$font-primary: "Lato Regular";
+$font-secondary: "Lato Bold";
+
+$white: #ffffff;
+$black: #000000;
+$semi-black: #221919;
+$light-grey: #919191;
+
+$bg-banner: #e2846f;
+$bg-bottom: #1d1d1f;
+
+$breakpoints-lg: 1550px;
+$breakpoints-md: 768px;
+$breakpoints-sm: 368px;
