@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as variable;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: variable.$white;
+}
+
+h2 {
+ color: variable.$black;
+}
+
+h3 {
+    color: variable.$white;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

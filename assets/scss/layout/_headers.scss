@@ -1,13 +1,21 @@
 @use "../abstracts/mixins" as mixin;
 
 header {
-    div {
-        div {}
+    .header {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-container-black {
+            width: 20%;
+        }
         nav {
+            @include mixin.list-navigation;
             ul {
-                li {
+                li:first-child {
                     a {
-                        @include mixin.list-navigation
+                        color: black;
                     }
                 }
             }

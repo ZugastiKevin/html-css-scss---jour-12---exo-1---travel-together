@@ -1,16 +1,25 @@
 @use "./variables" as variable;
 
 @mixin button {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
     color: variable.$black;
-    background-color: variable.$bg-button;
-    border-radius: 0.5rem;
+    background-color: variable.$white;
+    border-radius: variable.$radius-btn;
     box-shadow: 0 0 3px 1px variable.$black;
     cursor: pointer;
 }
 
 @mixin list-navigation {
-    text-transform: capitalize;
-    color: variable.$light-grey;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        li {
+            a {
+                text-transform: capitalize;
+                color: variable.$light-grey;
+            }
+        }
+    }
 }

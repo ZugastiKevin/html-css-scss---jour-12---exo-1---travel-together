@@ -1,7 +1,7 @@
-@use "../abstracts/mixins" as btn;
+@use "../abstracts/mixins" as mixin;
 
 .btn {
-    @include btn
+    @include mixin.button
 }
 
 .btn::after {
