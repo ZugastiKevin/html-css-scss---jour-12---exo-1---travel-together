@@ -293,6 +293,7 @@ header .header nav ul li:first-child a {
 }
 #seconde-banner .banner-body {
   width: 50%;
+  color: #ffffff;
 }
 #seconde-banner .banner-btn {
   display: flex;
