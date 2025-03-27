@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as variable;
+
 .container-header {
     width: 100%;
     padding: 0.9rem 10%;
@@ -7,4 +9,10 @@
     width: 80%;
     padding: 0.9rem 4;
     margin: 0 auto;
+}
+
+@media  screen and (max-width: variable.$breakpoints-md) {
+    .container {
+        width: 95%;
+    }
 }
