@@ -1,9 +1,21 @@
 @use "../abstracts/mixins" as mixin;
+@use "../abstracts/variables" as variable;
 
 .btn {
-    @include mixin.button
+    @include mixin.button;
 }
 
-.btn::after {
-    content: " >";
+.btn-primary::after {
+    @include mixin.button-after(variable.$arrow-primary);
+}
+
+.btn-secondary {
+    padding-right: 2rem;
+    position: relative;
+    color: variable.$white;
+}
+
+.btn-secondary::after {
+    @include mixin.button-after(variable.$arrow-secondary);
+    transform: translate(0, 15%);
 }

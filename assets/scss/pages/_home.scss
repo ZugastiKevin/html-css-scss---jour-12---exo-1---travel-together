@@ -1,3 +1,4 @@
+@use "../abstracts/mixins" as mixin;
 @use "../abstracts/variables" as variable;
 
 #first-banner {
@@ -10,7 +11,7 @@
         justify-content: center;
         justify-content: space-around;
         overflow: hidden;
-        gap: 5vh;
+        max-height: 35vh;
     
         .banner-content {
             width: 40%;
@@ -20,7 +21,7 @@
             align-items: flex-start;
             
             h1 {
-                margin-top: 3.5rem;
+                max-width: 85%;
             }
 
             p {
@@ -29,18 +30,70 @@
 
             a {
                 margin-top: 1.66rem;
-                margin-bottom: 3.5rem;
             }
         }
     
         .container-iphone-img {
-            width: 20%;
+            min-width: 20%;
+            max-width: 30%;
             margin-top: 3.5rem;
-            margin-bottom: -7rem;
+            margin-bottom: -10rem;
 
             img {
                 object-fit: cover;
             }
         }
+    }
+}
+
+#services {
+    .cards-ensemble {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-family: variable.$font-secondary;
+            margin-bottom: 0.5rem;
+        }
+    
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            height: 30vh;
+
+            .card-container {
+                width: 50%;
+                border-radius: variable.$radius;
+
+                .first-service {
+                    @include mixin.bg-img(url(../img/homme-assis-batiment.jpg));
+                }
+            }
+
+            .card-container-column {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .seconde-service {
+                    @include mixin.bg-img(url(../img/passport.jpg));
+                }
+
+                .third-service {
+                    @include mixin.bg-img(url(../img/montgolfiere.jpg));
+                }
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }

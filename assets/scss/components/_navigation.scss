@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as variable;
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    li {
+        a {
+            text-transform: capitalize;
+            color: variable.$light-grey;
+        }
+    }
+}

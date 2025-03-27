@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Lato Regular";
-  src: url(../../fonts/Lato/Lato-Regular.ttf);
+  src: url(../fonts/Lato/Lato-Regular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: "Lato Bold";
-  src: url(../../fonts/Lato/Lato-Bold.ttf);
+  src: url(../fonts/Lato/Lato-Bold.ttf);
   font-weight: 700;
 }
 * {
@@ -13,20 +13,24 @@
 }
 
 body {
+  font-family: "Lato Regular";
   margin: 0;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ffffff;
 }
 
 h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
   color: #000000;
 }
 
 h3 {
-  color: #ffffff;
+  text-transform: capitalize;
+  color: #000000;
 }
 
 ul {
@@ -57,7 +61,8 @@ img {
 }
 
 .btn {
-  padding: 0.5rem 1rem;
+  position: relative;
+  padding: 0.5rem 2rem 0.5rem 1rem;
   text-transform: uppercase;
   color: #000000;
   background-color: #ffffff;
@@ -66,8 +71,63 @@ img {
   cursor: pointer;
 }
 
-.btn::after {
-  content: " >";
+.btn-primary::after {
+  position: absolute;
+  right: 5%;
+  width: 10%;
+  content: url(../svg/angle-right-solid.svg);
+  filter: invert(0%) sepia(98%) saturate(8%) hue-rotate(157deg) brightness(90%) contrast(102%);
+}
+
+.btn-secondary {
+  padding-right: 2rem;
+  position: relative;
+  color: #ffffff;
+}
+
+.btn-secondary::after {
+  position: absolute;
+  right: 5%;
+  width: 10%;
+  content: url(../svg/angle-right-solid.svg);
+  filter: invert(52%) sepia(9%) saturate(3669%) hue-rotate(320deg) brightness(123%) contrast(81%);
+  transform: translate(0, 15%);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+ul li a {
+  text-transform: capitalize;
+  color: #919191;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+.card .card-body {
+  z-index: 1;
+}
+.card .card-body h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.card:hover .card-overlay {
+  opacity: 0;
 }
 
 header .header {
@@ -79,29 +139,20 @@ header .header {
 header .header .logo-container-black {
   width: 20%;
 }
-header .header nav ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-}
-header .header nav ul li a {
-  text-transform: capitalize;
-  color: #919191;
-}
 header .header nav ul li:first-child a {
-  color: black;
+  color: #000000;
 }
 
 #first-banner .first-banner {
   position: relative;
   margin-top: 4rem;
   border-radius: 1rem;
-  background-color: #e2846f;
+  background-color: #e7816b;
   display: flex;
   justify-content: center;
   justify-content: space-around;
   overflow: hidden;
-  gap: 5vh;
+  max-height: 35vh;
 }
 #first-banner .first-banner .banner-content {
   width: 40%;
@@ -111,22 +162,79 @@ header .header nav ul li:first-child a {
   align-items: flex-start;
 }
 #first-banner .first-banner .banner-content h1 {
-  margin-top: 3.5rem;
+  max-width: 85%;
 }
 #first-banner .first-banner .banner-content p {
   color: #ffffff;
 }
 #first-banner .first-banner .banner-content a {
   margin-top: 1.66rem;
-  margin-bottom: 3.5rem;
 }
 #first-banner .first-banner .container-iphone-img {
-  width: 20%;
+  min-width: 20%;
+  max-width: 30%;
   margin-top: 3.5rem;
-  margin-bottom: -7rem;
+  margin-bottom: -10rem;
 }
 #first-banner .first-banner .container-iphone-img img {
   object-fit: cover;
+}
+
+#services .cards-ensemble {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+#services .cards-ensemble h2 {
+  font-family: "Lato Bold";
+  margin-bottom: 0.5rem;
+}
+#services .cards-ensemble .cards-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 30vh;
+}
+#services .cards-ensemble .cards-container .card-container {
+  width: 50%;
+  border-radius: 1rem;
+}
+#services .cards-ensemble .cards-container .card-container .first-service {
+  border-radius: 1rem;
+  background-image: url(../img/homme-assis-batiment.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+#services .cards-ensemble .cards-container .card-container-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#services .cards-ensemble .cards-container .card-container-column .seconde-service {
+  border-radius: 1rem;
+  background-image: url(../img/passport.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+#services .cards-ensemble .cards-container .card-container-column .third-service {
+  border-radius: 1rem;
+  background-image: url(../img/montgolfiere.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+#services .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
