@@ -244,7 +244,7 @@ header .header nav ul li:first-child a {
   background-image: url(../img/wave.svg);
   background-size: cover;
   width: 100%;
-  height: 45vh;
+  height: 60vh;
 }
 #features .features {
   margin-top: 4rem;
@@ -271,6 +271,14 @@ header .header nav ul li:first-child a {
 #features .features .features-cards .feature-card .svg-container {
   width: 25%;
   filter: invert(52%) sepia(9%) saturate(3669%) hue-rotate(320deg) brightness(123%) contrast(81%);
+}
+#features .features .features-cards .feature-card .feature-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#features .features .features-cards .feature-card .feature-body p {
+  width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
