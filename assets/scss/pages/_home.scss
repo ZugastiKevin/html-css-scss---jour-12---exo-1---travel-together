@@ -97,3 +97,40 @@
         text-align: center;
     }
 }
+
+#features {
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    width: 100%;
+    height: 45vh;
+    .features {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4vh;
+
+        h2 {
+            margin-top: 4rem;
+        }
+
+        .features-cards {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+
+            .feature-card {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .svg-container {
+                    width: 25%;
+                    filter: variable.$svg-color;
+                }
+            }
+        }
+    }
+}

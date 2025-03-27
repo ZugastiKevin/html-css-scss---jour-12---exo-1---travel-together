@@ -29,8 +29,10 @@ h2 {
 }
 
 h3 {
+  font-size: 2rem;
   text-transform: capitalize;
   color: #000000;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -108,7 +110,15 @@ ul li a {
   position: relative;
   overflow: hidden;
 }
-.card .card-overlay {
+.card .card-body {
+  z-index: 1;
+}
+.card .card-body h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.card-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -118,15 +128,8 @@ ul li a {
   opacity: 1;
   transition: all 0.3s ease-out;
 }
-.card .card-body {
-  z-index: 1;
-}
-.card .card-body h3 {
-  text-transform: uppercase;
-  color: #ffffff;
-}
 
-.card:hover .card-overlay {
+.card-overlay:hover {
   opacity: 0;
 }
 
@@ -235,6 +238,39 @@ header .header nav ul li:first-child a {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#features {
+  background-image: url(../img/wave.svg);
+  background-size: cover;
+  width: 100%;
+  height: 45vh;
+}
+#features .features {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4vh;
+}
+#features .features h2 {
+  margin-top: 4rem;
+}
+#features .features .features-cards {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+#features .features .features-cards .feature-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#features .features .features-cards .feature-card .svg-container {
+  width: 25%;
+  filter: invert(52%) sepia(9%) saturate(3669%) hue-rotate(320deg) brightness(123%) contrast(81%);
 }
 
 /*# sourceMappingURL=style.css.map */
