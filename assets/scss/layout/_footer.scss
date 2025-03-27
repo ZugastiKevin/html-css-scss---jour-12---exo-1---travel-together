@@ -1,8 +1,9 @@
 @use "../abstracts/variables" as variable;
 
 footer {
-    background-color: variable.$semi-black;
-    height: 50vh;
+    background-color: variable.$bg-bottom;
+    height: 39vh;
+    padding-top: 18vh;
     #second-nav {
         .second-nav {
             margin-top: 0;

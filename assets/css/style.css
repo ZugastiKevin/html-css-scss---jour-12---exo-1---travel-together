@@ -154,8 +154,9 @@ header .header nav ul li:first-child a {
 }
 
 footer {
-  background-color: #221919;
-  height: 50vh;
+  background-color: #1d1d1f;
+  height: 39vh;
+  padding-top: 18vh;
 }
 footer #second-nav .second-nav {
   margin-top: 0;
