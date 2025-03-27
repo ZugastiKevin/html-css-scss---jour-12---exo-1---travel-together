@@ -281,4 +281,24 @@ header .header nav ul li:first-child a {
   width: 70%;
 }
 
+#seconde-banner .seconde-banner {
+  border-radius: 1rem;
+  background-color: #e7816b;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  margin-top: -10vh;
+}
+#seconde-banner .banner-body {
+  width: 50%;
+}
+#seconde-banner .banner-btn {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
