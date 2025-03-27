@@ -155,7 +155,7 @@ header .header nav ul li:first-child a {
 
 footer {
   background-color: #1d1d1f;
-  height: 39vh;
+  height: 45vh;
   padding-top: 18vh;
 }
 footer #second-nav .second-nav {
@@ -180,7 +180,7 @@ footer #infos .infos {
   color: #919191;
 }
 footer #infos .infos .list-infos {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
 }
@@ -189,6 +189,7 @@ footer #infos .infos .list-infos ul {
   gap: 0;
 }
 footer #infos .infos .list-infos .list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
@@ -200,13 +201,13 @@ footer #infos .infos .list-infos .list a {
   text-transform: none;
 }
 footer #infos .infos .social {
-  width: 50%;
+  width: 15%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 footer #infos .infos .social .social-icon {
-  width: 25%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
