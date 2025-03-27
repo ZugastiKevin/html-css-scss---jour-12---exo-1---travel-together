@@ -146,6 +146,23 @@ header .header nav ul li:first-child a {
   color: #000000;
 }
 
+footer {
+  margin-top: -14.5vh;
+  background-color: #221919;
+  height: 50vh;
+}
+footer #footer .second-nav {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+footer #footer .second-nav .second-logo-container {
+  width: 30%;
+}
+footer #footer .second-nav .second-navigation {
+  width: 30%;
+}
+
 #first-banner .first-banner {
   position: relative;
   margin-top: 4rem;
@@ -282,6 +299,7 @@ header .header nav ul li:first-child a {
 }
 
 #seconde-banner .seconde-banner {
+  position: relative;
   border-radius: 1rem;
   background-color: #e7816b;
   display: flex;
@@ -290,6 +308,7 @@ header .header nav ul li:first-child a {
   align-items: center;
   padding: 4rem;
   margin-top: -10vh;
+  z-index: 1;
 }
 #seconde-banner .banner-body {
   width: 50%;

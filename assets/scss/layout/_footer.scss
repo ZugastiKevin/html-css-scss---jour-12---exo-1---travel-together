@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as variable;
+
+footer {
+    margin-top: -14.5vh;
+    background-color: variable.$semi-black;
+    height: 50vh;
+    #footer {
+        .second-nav {
+
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            .second-logo-container {
+                width: 30%;
+            }
+            .second-navigation {
+                width: 30%;
+            }
+        }
+    }
+}
