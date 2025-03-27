@@ -128,7 +128,7 @@
 
                 .svg-container {
                     width: 25%;
-                    filter: variable.$svg-color;
+                    filter: variable.$svg-color-saumon;
                 }
 
                 .feature-body {
@@ -155,6 +155,7 @@
         align-items: center;
         padding: 4rem;
         margin-top: -10vh;
+        margin-bottom: -15vh;
         z-index: 1;
     }
     .banner-body {

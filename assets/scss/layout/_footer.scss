@@ -1,20 +1,67 @@
 @use "../abstracts/variables" as variable;
 
 footer {
-    margin-top: -14.5vh;
     background-color: variable.$semi-black;
     height: 50vh;
-    #footer {
+    #second-nav {
         .second-nav {
-
+            margin-top: 0;
+            padding-bottom: 3rem;
             display: flex;
             justify-content: center;
             justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid variable.$light-grey;
             .second-logo-container {
                 width: 30%;
             }
             .second-navigation {
                 width: 30%;
+            }
+        }
+    }
+    #infos {
+        .infos {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            color: variable.$light-grey;
+            .list-infos {
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+                ul {
+                    font-size: 1.3rem;
+                    gap: 0;
+                }
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    text-transform: capitalize;
+                    .upper {
+                        text-transform: uppercase;
+                    }
+                    a {
+                        text-transform: none;
+                    }
+                }
+            }
+            .social {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                .social-icon {
+                    width: 25%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .icon-container {
+                        width: 100%;
+                        filter: variable.$svg-color-white;
+                    }
+                }
             }
         }
     }
