@@ -7,7 +7,11 @@
 body {
     font-family: variable.$font-primary;
     margin: 0;
-    background-color: red;
+}
+main {
+    section {
+        margin-bottom: 3rem;
+    }
 }
 
 h1 {
@@ -49,4 +53,20 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+@media  screen and (max-width: variable.$breakpoints-md) {
+    main {
+        section {
+            margin-bottom: 1rem;
+        }
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
 }

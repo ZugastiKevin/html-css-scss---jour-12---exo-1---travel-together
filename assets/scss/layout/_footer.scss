@@ -2,11 +2,10 @@
 
 footer {
     background-color: variable.$bg-bottom;
-    height: 45vh;
-    padding-top: 23vh;
+    margin-top: -3rem;
+    padding-top: 3rem;
     #second-nav {
         .second-nav {
-            margin-top: 0;
             padding-bottom: 3rem;
             display: flex;
             justify-content: center;
@@ -62,6 +61,43 @@ footer {
                     .icon-container {
                         width: 100%;
                         filter: variable.$svg-color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: variable.$breakpoints-md) {
+    footer {
+        #second-nav {
+            .second-nav {
+                flex-direction: column;
+                .second-logo-container {
+                    width: 70%;
+                }
+                .second-navigation {
+                    width: 100%;
+                }
+            }
+        }
+        #infos {
+            .infos {
+                flex-direction: column;
+                .list-infos {
+                    width: 100%;
+                    flex-direction: column;
+                }
+                .social {
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: inherit;
+                    text-align: inherit;
+                    .social-icon {
+                        flex-direction: row;
+                        width: 45%;
+                        gap: 1rem;
                     }
                 }
             }

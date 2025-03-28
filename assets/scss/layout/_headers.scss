@@ -11,11 +11,41 @@ header {
             width: 20%;
         }
         nav {
+            .burger {
+                display: none;
+            }
             ul {
                 li:first-child {
                     a {
                         color: variable.$black;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: variable.$breakpoints-md) {
+    header {
+        .header {
+            flex-direction: column;
+            justify-content: space-between;
+            .logo-container-black {
+                width: 100%;
+            }
+            nav {
+                width: 20%;
+                .burger {
+                    display: block;
+                    padding: 1rem;
+                    border: 1px solid variable.$black;
+                    transition: all 0.2s ease-in-out;
+                }
+                .burger:hover {
+                    box-shadow: 0px 0px 4px 1px variable.$bg-banner;
+                }
+                ul {
+                    display: none;
                 }
             }
         }

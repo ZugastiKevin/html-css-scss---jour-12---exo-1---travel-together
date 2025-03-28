@@ -15,7 +15,10 @@
 body {
   font-family: "Lato Regular";
   margin: 0;
-  background-color: red;
+}
+
+main section {
+  margin-bottom: 3rem;
 }
 
 h1 {
@@ -59,6 +62,17 @@ img {
   object-position: center;
 }
 
+@media screen and (max-width: 768px) {
+  main section {
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+}
 .container-header {
   width: 100%;
   padding: 0.9rem 10%;
@@ -119,6 +133,13 @@ ul li a {
   color: #919191;
 }
 
+@media screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
 .card {
   position: relative;
   overflow: hidden;
@@ -155,17 +176,43 @@ header .header {
 header .header .logo-container-black {
   width: 20%;
 }
+header .header nav .burger {
+  display: none;
+}
 header .header nav ul li:first-child a {
   color: #000000;
 }
 
+@media screen and (max-width: 768px) {
+  header .header {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header .header .logo-container-black {
+    width: 100%;
+  }
+  header .header nav {
+    width: 20%;
+  }
+  header .header nav .burger {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #000000;
+    transition: all 0.2s ease-in-out;
+  }
+  header .header nav .burger:hover {
+    box-shadow: 0px 0px 4px 1px #e7816b;
+  }
+  header .header nav ul {
+    display: none;
+  }
+}
 footer {
   background-color: #1d1d1f;
-  height: 45vh;
-  padding-top: 23vh;
+  margin-top: -3rem;
+  padding-top: 3rem;
 }
 footer #second-nav .second-nav {
-  margin-top: 0;
   padding-bottom: 3rem;
   display: flex;
   justify-content: center;
@@ -224,9 +271,38 @@ footer #infos .infos .social .social-icon .icon-container {
   filter: invert(100%) sepia(0%) saturate(7485%) hue-rotate(266deg) brightness(108%) contrast(103%);
 }
 
+@media screen and (max-width: 768px) {
+  footer #second-nav .second-nav {
+    flex-direction: column;
+  }
+  footer #second-nav .second-nav .second-logo-container {
+    width: 70%;
+  }
+  footer #second-nav .second-nav .second-navigation {
+    width: 100%;
+  }
+  footer #infos .infos {
+    flex-direction: column;
+  }
+  footer #infos .infos .list-infos {
+    width: 100%;
+    flex-direction: column;
+  }
+  footer #infos .infos .social {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: inherit;
+    text-align: inherit;
+  }
+  footer #infos .infos .social .social-icon {
+    flex-direction: row;
+    width: 45%;
+    gap: 1rem;
+  }
+}
 #first-banner .first-banner {
   position: relative;
-  margin-top: 4rem;
   border-radius: 1rem;
   background-color: #e7816b;
   display: flex;
@@ -264,7 +340,6 @@ footer #infos .infos .social .social-icon .icon-container {
 }
 
 #services .cards-ensemble {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
 }
@@ -326,10 +401,10 @@ footer #infos .infos .social .social-icon .icon-container {
   background-position: center;
   width: 100%;
   padding-top: 0.1rem;
-  padding-bottom: 15vh;
+  padding-bottom: 9vh;
+  margin-bottom: 5rem;
 }
 #features .features {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -363,55 +438,97 @@ footer #infos .infos .social .social-icon .icon-container {
   width: 70%;
 }
 
+#seconde-banner {
+  position: relative;
+  z-index: 1;
+  margin-top: -10rem;
+  background: linear-gradient(0deg, rgb(29, 29, 31) 65%, rgb(245, 245, 245) 65%);
+}
 #seconde-banner .seconde-banner {
   position: relative;
   border-radius: 1rem;
   background-color: #e7816b;
   display: flex;
   justify-content: center;
-  justify-content: space-between;
+  justify-content: space-arround;
   align-items: center;
-  padding: 4rem;
-  margin-top: -11.3vh;
-  margin-bottom: -15vh;
-  z-index: 1;
+  padding: 2rem 0;
 }
-#seconde-banner .banner-body {
-  width: 50%;
+#seconde-banner .seconde-banner .banner-body {
+  width: 45%;
   color: #ffffff;
 }
-#seconde-banner .banner-btn {
+#seconde-banner .seconde-banner .banner-body h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+#seconde-banner .seconde-banner .banner-body p {
+  margin-bottom: 1.66rem;
+}
+#seconde-banner .seconde-banner .banner-btn {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 45%;
   font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  #first-banner .first-banner {
-    display: flex;
-    max-height: 41vh;
-  }
   #first-banner .first-banner .banner-content {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-left: 1rem;
-  }
-  #first-banner .first-banner .banner-content h1 {
-    max-width: 85%;
-  }
-  #first-banner .first-banner .banner-content p {
-    color: #ffffff;
-  }
-  #first-banner .first-banner .banner-content a {
-    margin-top: 1.66rem;
-    margin-bottom: 1.66rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin-left: inherit;
   }
   #first-banner .first-banner .container-iphone-img {
     display: none;
+  }
+  #services .cards-ensemble {
+    justify-content: center;
+    align-items: center;
+  }
+  #services .cards-ensemble .cards-container {
+    height: inherit;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services .cards-ensemble .cards-container .card-container {
+    width: 100%;
+    height: 30vh;
+  }
+  #services .cards-ensemble .cards-container .card-container-column {
+    width: 100%;
+    height: 60vh;
+  }
+  #features .features {
+    align-items: center;
+  }
+  #features .features .features-cards {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #features .features .features-cards .feature-card {
+    width: 100%;
+  }
+  #features .features .features-cards .feature-card .svg-container {
+    width: 20%;
+  }
+  #seconde-banner .container {
+    width: 100%;
+  }
+  #seconde-banner .seconde-banner {
+    flex-direction: column;
+  }
+  #seconde-banner .seconde-banner .banner-body {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  #seconde-banner .seconde-banner .banner-btn {
+    width: 100%;
+    margin-bottom: 1.66rem;
   }
 }
 

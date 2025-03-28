@@ -11,3 +11,11 @@ ul {
         }
     }
 }
+
+@media  screen and (max-width: variable.$breakpoints-md) {
+    ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
